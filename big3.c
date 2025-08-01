@@ -1,21 +1,25 @@
 #include <stdio.h>
 
-void main() {
-    int num1, num2, num3;
+void biggest3() {
+    double n1, n2, n3;
 
-    // Input 3 numbers
-    printf("Enter three integers:\n");
-    scanf("%d %d %d", &num1, &num2, &num3);
+    // Prompt the user to enter three numbers
+    printf("Enter three different numbers: ");
+    // Read the three numbers from the user
+    scanf("%lf %lf %lf", &n1, &n2, &n3);
 
-    // Find the largest number
-    if (num1 >= num2 && num1 >= num3) {
-        printf("The biggest number is: %d\n", num1);
-    } else if (num2 >= num1 && num2 >= num3) {
-        printf("The biggest number is: %d\n", num2);
-    } else {
-        printf("The biggest number is: %d\n", num3);
+    // Check if n1 is the largest
+    if (n1 >= n2 && n1 >= n3) {
+        printf("%.2f is the largest number.\n", n1);
+    } 
+    // Check if n2 is the largest (if n1 was not)
+    else if (n2 >= n1 && n2 >= n3) {
+        printf("%.2f is the largest number.\n", n2);
+    } 
+    // If neither n1 nor n2 are the largest, then n3 must be
+    else {
+        printf("%.2f is the largest number.\n", n3);
     }
 
    // return 0;
 }
-
